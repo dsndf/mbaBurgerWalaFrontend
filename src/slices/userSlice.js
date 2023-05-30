@@ -68,7 +68,7 @@ export function LoadUser() {
     return async (dispatch, getState) => {
         dispatch(setUserStatus("loading"));
         try {
-            const { data } = await axios.get('/me',{
+            const { data } = await axios.get('https://mbabwbackend.onrender.com/me',{
             withCredentials:true
             });
             dispatch(setUserStatus("idle"));
