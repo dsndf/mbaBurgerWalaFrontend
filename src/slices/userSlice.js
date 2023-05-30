@@ -68,7 +68,9 @@ export function LoadUser() {
     return async (dispatch, getState) => {
         dispatch(setUserStatus("loading"));
         try {
-            const { data } = await axios.get('/me');
+            const { data } = await axios.get('/me',{
+            withCredentials:true
+            });
             dispatch(setUserStatus("idle"));
              dispatch(setUser(data.user));
             dispatch(setIsAuth(true));
