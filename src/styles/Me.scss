@@ -1,0 +1,35 @@
+
+@import 'color';
+
+.Me{
+
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+border: 1px solid red;
+height: 80vh;
+background-color: $logoColor;
+
+>div{
+   
+  
+    text-align: center;
+ 
+    img{
+     
+        border-radius: 100%;
+        height: 150px;
+width: 150px;
+    }
+    h4{
+        color: #fff;
+
+    }
+    p{
+        color: #fff;
+        margin: 10px 0;
+    }
+}
+
+}

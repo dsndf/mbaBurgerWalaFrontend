@@ -1,0 +1,59 @@
+@import 'color';
+.profile-cont{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg2 ;
+    >div{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 50%;
+        height: 100%;
+        
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        >div{
+            width: 100%;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-between;
+             align-items: center;
+        }
+        img{
+            width: 20%;
+            border-radius: 100%;
+            box-shadow: 0 7px 10px rgb(148, 148, 148);
+        margin-bottom: 20px;
+        }
+   >button{
+    padding: 10px 15px;
+    border: 1px solid rgb(197, 197, 197);
+    margin: 10px auto;
+    border-radius: 4px;
+    font-weight: 800;
+    &:hover{
+        filter: brightness(0.89);
+        transition: all 0.5s;
+        cursor: pointer;
+
+    }
+   }
+
+    }
+
+}
+
+@media  screen and (max-width:600px) {
+
+  .profile-cont{
+
+   >div{
+    width: 100%;
+   }
+  }
+   
+  }

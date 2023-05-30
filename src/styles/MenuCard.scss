@@ -1,0 +1,53 @@
+@import 'color';
+
+.MenuCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 310px;
+    box-shadow: 0px 7px 7px #c1c1c1;
+    color: #fff;
+    height: 400px;
+    text-align: center;
+    border-radius: 10px;
+    padding-bottom: 15px;
+
+ >div:first-child{
+    border: 1px solid red;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: block;
+    width: 100%;
+    background-color: $logoColor;
+    padding: 10px;
+ }
+>img{
+    width: 60%;
+}
+
+ >div>h5{
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    font-weight: 500;
+ }
+>div>h2{
+    color: black;
+}
+>button{
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    background-color: $logoColor;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+}
+
+}
+
+.MenuCard:hover{
+transition: all 0.5s;
+transform: scale(1.03);
+cursor: pointer;
+}

@@ -1,0 +1,23 @@
+@import 'color';
+
+.notfound{
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    background: $bg2;
+    >div{
+height: 100%;
+padding: 20px;
+background-color: #fff;
+width: 50%;
+text-align: center;
+h2{
+    margin: 15px 0;
+    font-size: 30px;
+}
+button{
+    margin: 30px auto;
+    border: none;
+}
+}
+}

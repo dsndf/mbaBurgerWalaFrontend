@@ -1,0 +1,89 @@
+@import 'color';
+.myorders-cont {
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    
+    // background: linear-gradient(rgb(255 22 96), orange);
+    background-color: $bg
+    ;
+
+    div {
+        margin: 10px;
+        width: 70%;
+        height: 80%;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 4px;
+        overflow-y: scroll;
+
+        table {
+            margin: 5px auto;
+            width: 90%;
+            // border: 1px solid;
+            border-radius: 10px;
+            text-align: center;
+            border-collapse: collapse;
+
+            thead {
+                background-color: black;
+                font-size: 15px;
+                color: #fff;
+                 
+                tr {
+                    th{
+                        padding: 7px;
+                    }
+                    th:last-child {
+                        cursor: pointer;
+                    }
+
+                }
+
+
+            }
+
+            tbody {
+                background-color: rgba(114, 114, 114, 0.068);
+
+                >tr{
+                    td {
+                        font-size: 15px;
+                    
+                        padding: 10px;
+                    }
+                    td:last-child {
+                        cursor: pointer;
+                        svg{
+                            color:rgb(0, 0, 0);
+                            font-size: 17px;
+                        }
+                    }
+                    
+                }
+
+            }
+        }
+
+    }
+
+}
+@media screen and (max-width:600px) {
+
+    .myorders-cont {
+padding: 0;
+        div {
+         margin: 0;
+         height: 100%;
+         width: 100%;
+         overflow-x: scroll;
+     
+    
+        }
+    
+    }
+
+    
+}

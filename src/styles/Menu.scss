@@ -1,0 +1,41 @@
+@import 'color';
+
+@import 'color';
+.Menu{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 10px;
+    margin:50px 0px;
+
+
+}
+.main-menu-para{
+
+    color: rgb(214, 0, 68);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 21px;
+    padding: 35px 79px;
+    transition: all 0.5s;
+    &:hover{
+        color: black;
+    }
+}
+
+@media  screen and (max-width:600px) {
+ .Menu{
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+ }
+   
+  }
+@media  screen and (max-width:768px) {
+ .Menu{
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+ }
+   
+  }

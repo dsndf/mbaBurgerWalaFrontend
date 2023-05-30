@@ -1,0 +1,38 @@
+@import 'color';
+
+.login-cont {
+    height: 100vmin;
+    background: linear-gradient(rgb(255 22 96), orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >div {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 4px;
+        width: 30%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+        cursor: pointer;
+
+        svg {
+            font-size: 25px;
+
+            &:hover {
+
+                transition: all 0.5s;
+                filter: brightness(0.89);
+            }
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .login-cont >div{
+          width: 80%;
+    }
+
+}

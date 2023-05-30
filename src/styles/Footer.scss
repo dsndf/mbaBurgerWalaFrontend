@@ -1,0 +1,76 @@
+@import 'color';
+
+
+.Footer {
+
+    color: $text;
+    padding: 10px;
+    display: flex;
+    height: 400px;
+    // border: 1px solid red;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: #1f1f1f;
+
+    >div {
+        h2 {
+            color: $logoColor;
+        }
+
+        em {
+            margin-right: 10px;
+            // margin: 10px 0;
+
+        }
+    }
+
+    .Icons {
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       a >svg {
+color: $text;
+            font-size: 25px;
+
+            margin: 10px;
+
+
+            &:hover{
+                color: $logoColor;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
+
+@media  screen and (max-width:600px) {
+    .Footer {
+
+
+
+      
+        height: 500px;
+        // border: 1px solid red;
+      justify-content: center;
+        align-items: center;
+        gap: 100px;
+        flex-direction: column;
+    >div:first-child{
+        text-align: center;
+        h2{
+            margin: 10px 0;
+        }
+    }
+   
+    
+   
+    
+    
+    }
+  
+   
+  }

@@ -1,0 +1,80 @@
+@import './color.scss';
+
+.Header {
+  display: flex;
+  align-items: center;
+  
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0px 5px 7px #e3e3e38a;
+
+  .logo svg {
+    font-size: 3rem;
+    color: $logoColor;
+  }
+
+  .links {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+  
+  svg{
+    font-size: 20px;
+  }
+  
+   
+
+    a {
+      margin: 0 20px;
+      
+   position: relative;
+      color: black;
+        >span{
+          position: absolute;
+          top: -12px;
+          right: -12px;
+          padding: 3px 7px;
+          color: #fff;
+          border-radius: 100%;
+          font-size: 11px;
+          border: none;
+          background-color: #ff2349;
+    }
+      &:hover {
+        color: $logoColor;
+      }
+    }
+
+
+  }
+
+  >div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+ 
+  
+
+  }
+}
+
+
+@media  screen and (max-width:600px) {
+
+  .Header{
+    font-size: 14px;
+     .links{
+      a{
+        margin: 0 14px;
+      }
+     }
+   .logo svg{
+    font-size: 2rem;
+   }
+  
+  }
+ 
+}

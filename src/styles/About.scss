@@ -1,0 +1,100 @@
+@import 'color';
+.about-cont{
+    // border:1px solid red;
+height: 100vmin;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+background-color: $bg;
+>div{
+background-color: white;
+    height: 100%;
+
+    width: 70%;
+    text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+gap: 5px;
+
+
+>h2{
+    text-align: left;
+    font-size: 28px;
+    padding: 4px 10px;
+    color: rgb(212, 0, 35);
+    background-color: black;
+}
+.b1{
+    display: flex;
+    padding: 10px;
+    height: 80%;
+
+    flex-direction: column;
+    justify-content: space-between;
+span{
+    padding: 8px 10px;
+    margin: 0 auto;
+    color: #fff;
+    background-color: black;
+    font-size: 26px;
+    border-radius: 100%;
+    line-height: 10px;
+}
+}
+>div:last-child{
+ background-color: black;
+ color: white;
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ 
+ padding: 10px;
+ padding-top: 50px;
+ h3{
+    margin-bottom: 14px;
+ }
+
+}
+
+
+
+}
+
+
+
+}
+@media screen and (max-width:768px) {
+    .about-cont{
+        // border:1px solid red;
+    height: auto;
+
+    >div{
+    background-color: white;
+        height: 600px;
+    
+        width: 100%;
+  
+    
+    
+  
+  
+    >div:last-child{
+
+    height: 200px;
+    
+     
+
+    
+    }
+    
+    
+    
+    }
+    
+    
+    
+    }
+    
+}

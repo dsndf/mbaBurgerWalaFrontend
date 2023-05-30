@@ -1,0 +1,117 @@
+@import 'color';
+
+.dash-box {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    color: #030303;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    /* line-height: 88px; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dashboard {
+    height: auto;
+    background: $bg2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >div {
+        width: 70%;
+        height: auto;
+        margin: 20px;
+        background-color: #fff;
+        height: 100%;
+        border: none;
+        border-radius: 6px;
+
+        .dash-fields {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2rem;
+            background-color: black;
+        }
+
+        >div:last-child {
+            display: flex;
+
+            justify-content: space-around;
+            padding: 20px 10px;
+            align-items: center;
+            height: 100vmin;
+
+            >div:first-child {
+
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .btn {
+                    margin: 20px 0;
+                }
+
+            }
+
+            .chart {
+
+                width: 50%;
+                height: 53%;
+                display: flex;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .dashboard {
+        height: auto;
+
+        >div {
+
+            width: 100%;
+            margin: 0;
+
+            .dash-fields {
+                flex-direction: column;
+                gap: 20px;
+                .dash-box {
+                  
+                    >h2{
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            >div:last-child {
+                flex-direction: column;
+                height: 100%;
+                padding: 20px;
+
+              
+
+                .chart {
+
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    justify-content: center;
+                    // display: flex;
+                }
+            }
+
+        }
+
+    }
+
+
+}
