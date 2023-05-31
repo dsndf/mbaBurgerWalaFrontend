@@ -48,7 +48,7 @@ export function getMyOrders() {
 
             const { data } = await axios.get(`${server}/my/orders`,{ withCredentials: true });
             console.log("this is ",data.orders)
-
+            
             dispatch(setOrders(data.orders))
             dispatch(setOrdersStatus("idle"));
 
