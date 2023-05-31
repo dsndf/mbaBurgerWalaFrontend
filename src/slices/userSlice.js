@@ -67,7 +67,7 @@ export function LoadUser() {
     return async (dispatch, getState) => {
         dispatch(setUserStatus("loading"));
         try {
-            const { data } = await axios.get(`${server}/me`,null, { withCredentials: true });
+            const { data } = await axios.get(`${server}/me`, { withCredentials: true });
             dispatch(setUserStatus("idle"));
             dispatch(setUser(data.user));
             dispatch(setIsAuth(true));
@@ -87,7 +87,7 @@ export function logoutUser() {
         dispatch(setUserStatus("loading"));
         try {
             console.log("dasda");
-            const { data } = await axios.get(`${server}/logout`,null, { withCredentials: true });
+            const { data } = await axios.get(`${server}/logout`, { withCredentials: true });
             dispatch(setUserStatus("idle"));
             dispatch(setIsLogOut(true));
             dispatch(setIsAuth(false));
