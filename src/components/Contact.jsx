@@ -7,6 +7,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
+const server = 'https://mbabwbackend.onrender.com';
 
 const Thanku = () => {
   return (
@@ -44,7 +45,7 @@ const Contact = () => {
         return;
       }
 
-      const { data } = await axios.post("/contact", state);
+      const { data } = await axios.post(`${server}/contact`, state);
 
       if (data.success === true) {
         setLoader(false);
