@@ -12,12 +12,12 @@ const Box = ({ title, count }) => (
     <h3>{title === "Income" ? `₹${count}` : count}</h3>
   </div>
 );
-
+const server = 'https://mbabwbackend.onrender.com';
 const Dashboard = () => {
   const [state, setState] = useState({});
   const [status, setStatus] = useState(false);
   const getCounts = async () => {
-    const { data } = await axios.get("/admin/stats");
+    const { data } = await axios.get(`${server}/admin/stats`);
     setState(data);
     setStatus(true);
   };
