@@ -46,7 +46,7 @@ if(isDeleted){
 
     dispatch(getAllOrders());
   }, [isOrderUpdated,isDeleted]);
-  if (status === "laoding") {
+  if (status === "loading") {
     return <Loading />;
   }
   return (

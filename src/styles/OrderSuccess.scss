@@ -26,3 +26,13 @@ a{
 }
 
 }
+@media screen and (max-width:768px) {
+    .order-success{
+    
+    >div{
+        height: 100%;
+        width: 100%;
+    }
+    
+    }
+}

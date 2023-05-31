@@ -84,7 +84,7 @@ export function  updateOrder(id) {
 
     return async (dispatch, getState) => {
         dispatch(setOrdersStatus("loading"));
-        try {
+        try { 
             console.log(id);
             const { data } = await axios.put(`${server}/admin/update/order/${id}`,{ withCredentials: true });
              console.log(data.order)

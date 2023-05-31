@@ -18,6 +18,9 @@ const Users = () => {
   const { allUsers, status, isUpdated, isDeleted } = useSelector(
     (state) => state.allUsersReducer
   );
+  
+  const userState = useSelector((state) => state.userReducer);
+  const user = userState.user;
   const dispatch = useDispatch();
   useEffect(() => {
     if (isUpdated) {
@@ -61,7 +64,15 @@ const Users = () => {
                     <td>{role}</td>
                     <td>{createdAt}</td>
                     <td className="icons">
-                      <Link onClick={() => dispatch(updateUser(_id))}>
+                      <Link
+                        onClick={() => {
+                          if (user._id === _id) {
+                            toast.info("Admin can't change its role");
+                            return;
+                          }
+                          dispatch(updateUser(_id));
+                        }}
+                      >
                         <GrEdit />
                       </Link>
                     </td>
