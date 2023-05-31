@@ -33,6 +33,7 @@ import axios from 'axios'
 import StripeCompo from './components/StripeCompo'
 import About from './components/About'
 const server = 'https://mbabwbackend.onrender.com';
+axios.defaults.withCredentials=true;
 const App = () => {
   const { isAuth, isLogout, user } = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();

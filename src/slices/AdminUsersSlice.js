@@ -46,7 +46,7 @@ export function getAllUsers() {
     return async (dispatch, getState) => {
         dispatch(setAllUsersStatus("loading"));
         try {
-            const {data} = await axios.get(`${server}/admin/users`);
+            const {data} = await axios.get(`${server}/admin/users`,{ withCredentials: true });
          dispatch(setAllUsers(data.users));
          dispatch(setAllUsersStatus("idle"));
 
@@ -66,7 +66,7 @@ export function updateUser(userId) {
     return async (dispatch, getState) => {
         dispatch(setAllUsersStatus("loading"));
         try {
-            const {data} = await axios.put(`${server}/admin/user/update/${userId}`);
+            const {data} = await axios.put(`${server}/admin/user/update/${userId}`,{ withCredentials: true });
             
          dispatch(setIsUpdated(true));
          dispatch(setAllUsersStatus("idle"));

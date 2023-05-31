@@ -45,6 +45,7 @@ export function placeOrder(order) {
         try {
             console.log(order);
             const { data } = await axios.post(`${server}/create/order`, order, {
+                 withCredentials: true ,
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -67,7 +68,7 @@ export function getOrderDetails(orderid) {
         dispatch(setOrderStatus("loading"));
         try {
         
-            const { data } = await axios.get(`${server}/order/${orderid}`);
+            const { data } = await axios.get(`${server}/order/${orderid}`,{ withCredentials: true });
         dispatch(setOrder(data.order));
         dispatch(setOrderStatus("idle"));
 
@@ -85,7 +86,7 @@ export function deleteOrder(orderid) {
         dispatch(setOrderStatus("loading"));
         try {
         
-            const { data } = await axios.delete(`${server}/admin/delete/order/${orderid}`);
+            const { data } = await axios.delete(`${server}/admin/delete/order/${orderid}`,{ withCredentials: true });
         dispatch(setIsDeleted(true));
         dispatch(setOrderStatus("idle"));
 
