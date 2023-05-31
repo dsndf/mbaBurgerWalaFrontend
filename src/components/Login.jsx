@@ -3,8 +3,8 @@ import '../styles/Login.scss';
 import {FcGoogle} from 'react-icons/fc';
 import {motion} from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
-import { LoginUser, setIsLogOut } from '../slices/userSlice';
-import { useTitle } from '../Hooks/useTitle';
+import { LoginUser } from '../slices/userSlice';
+
 import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const dispatch = useDispatch();
@@ -13,9 +13,9 @@ const Login = () => {
   const login = ()=>{
     console.log("called")
     dispatch(LoginUser());
-  }
+  } 
  const navigation = useNavigate();
-  useTitle("Login");
+ 
   
  useEffect(()=>{
   if(isAuth){

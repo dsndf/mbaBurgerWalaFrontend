@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
 import "../styles/Hero.scss";
 import { motion } from "framer-motion";
-import { useTitle } from "../Hooks/useTitle";
+
 
 const Hero = () => {
-   useTitle("Home");
 
 
   return (
