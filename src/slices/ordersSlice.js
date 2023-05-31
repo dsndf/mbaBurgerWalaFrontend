@@ -46,9 +46,10 @@ export function getMyOrders() {
         dispatch(setOrdersStatus("loading"));
         try {
 
-            const { data } = await axios.get(`${server}/my/orders`);
+            const  response = await axios.get(`${server}/my/orders`,{withCredentials:true});
+            const {data} = response;
             console.log("this is ",data.orders)
-
+            
             dispatch(setOrders(data.orders))
             dispatch(setOrdersStatus("idle"));
 
