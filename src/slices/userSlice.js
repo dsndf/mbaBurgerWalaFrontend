@@ -1,13 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from 'axios';
-// import { server } from "../store";
 const server = 'https://mbabwbackend.onrender.com';
 const initialState = {
     user: {},
     isLogin: false,
     isAuth: false,
     status: "idle",
-    isLogout:false,
+    isLogout: false,
     err: ""
 }
 
@@ -33,16 +32,16 @@ const userSlice = createSlice({
         setUserError(state, action) {
             state.err = action.payload;
         }
- ,
- setIsLogOut(state,action){
-    state.isLogout = action.payload;
- }
+        ,
+        setIsLogOut(state, action) {
+            state.isLogout = action.payload;
+        }
     }
 
 
 });
 
-export const {setIsLogOut, setIsAuth, setIslogin, setUser, setUserError, setUserStatus } = userSlice.actions;
+export const { setIsLogOut, setIsAuth, setIslogin, setUser, setUserError, setUserStatus } = userSlice.actions;
 
 // thunk middleware to load the user
 
@@ -51,7 +50,7 @@ export function LoginUser() {
     return async (dispatch, getState) => {
         dispatch(setUserStatus("loading"));
         try {
-                window.open(`${server}/google/login`,"_parent");
+            window.open(`${server}/google/login`, "_parent");
             dispatch(setIslogin(true));
             dispatch(setUserStatus("idle"));
         }
@@ -68,15 +67,15 @@ export function LoadUser() {
     return async (dispatch, getState) => {
         dispatch(setUserStatus("loading"));
         try {
-            const { data } = await axios.get('/me');
+            const { data } = await axios.get(`${server}/me`, { withCredentials: true });
             dispatch(setUserStatus("idle"));
-             dispatch(setUser(data.user));
+            dispatch(setUser(data.user));
             dispatch(setIsAuth(true));
-       
+
         }
 
         catch (err) {
-        
+
             dispatch(setUserStatus("idle"));
             dispatch(setUserError(err.response.data.message));
         }
@@ -88,11 +87,11 @@ export function logoutUser() {
         dispatch(setUserStatus("loading"));
         try {
             console.log("dasda");
-            const { data } = await axios.get('/logout',{withCredentials:true});
+            const { data } = await axios.get(`${server}/logout`, { withCredentials: true });
             dispatch(setUserStatus("idle"));
-           dispatch(setIsLogOut(true));
+            dispatch(setIsLogOut(true));
             dispatch(setIsAuth(false));
-       
+
         }
 
         catch (err) {

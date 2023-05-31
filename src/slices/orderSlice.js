@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from 'axios';
+
+const server = 'https://mbabwbackend.onrender.com';
 const initialState = {
     order: {},
     isPlaced: false,
@@ -42,7 +44,7 @@ export function placeOrder(order) {
         dispatch(setOrderStatus("loading"));
         try {
             console.log(order);
-            const { data } = await axios.post('/create/order', order, {
+            const { data } = await axios.post(`${server}/create/order`, order, {
                 headers: {
                     "Content-Type": "application/json"
                 }
@@ -65,7 +67,7 @@ export function getOrderDetails(orderid) {
         dispatch(setOrderStatus("loading"));
         try {
         
-            const { data } = await axios.get(`/order/${orderid}`);
+            const { data } = await axios.get(`${server}/order/${orderid}`);
         dispatch(setOrder(data.order));
         dispatch(setOrderStatus("idle"));
 
@@ -83,7 +85,7 @@ export function deleteOrder(orderid) {
         dispatch(setOrderStatus("loading"));
         try {
         
-            const { data } = await axios.delete(`/admin/delete/order/${orderid}`);
+            const { data } = await axios.delete(`${server}/admin/delete/order/${orderid}`);
         dispatch(setIsDeleted(true));
         dispatch(setOrderStatus("idle"));
 

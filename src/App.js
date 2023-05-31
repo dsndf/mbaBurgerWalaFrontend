@@ -32,27 +32,23 @@ import Items from './components/Items'
 import axios from 'axios'
 import StripeCompo from './components/StripeCompo'
 import About from './components/About'
+const server = 'https://mbabwbackend.onrender.com';
 const App = () => {
-
-
-
   const { isAuth, isLogout, user } = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();
   const [stripeApiKey, setStripeApiKey] = useState("")
   async function getApiKey() {
-    console.log("this api key ", stripeApiKey);
-    try{
-    const { data } = await axios.get('/stripe/api/key');
- setStripeApiKey(data.stripeApiKey);
+    try {
+      const { data } = await axios.get(`${server}/stripe/api/key`);
+      setStripeApiKey(data.stripeApiKey);
     }
-   catch(err){
-    console.log(err.message);
-   }
+    catch (err) {
+      console.log(err.message);
+    }
   }
 
 
   useEffect(() => {
-
     if (isLogout) {
       toast.success("Logout Successfully");
       dispatch(setIsLogOut(false));
@@ -75,8 +71,8 @@ const App = () => {
 
 
             <Me></Me>
-           <div id="menu"> <Heading text="Menu"  /></div>
-           
+            <div id="menu"> <Heading text="Menu" /></div>
+
             <Menu />
 
           </>
@@ -120,7 +116,7 @@ const App = () => {
 
         } />
         <Route path='/admin/users' element={
-         <ProtectedRoute isAuth={isAuth}  ><Users/></ProtectedRoute>
+          <ProtectedRoute isAuth={isAuth}  ><Users /></ProtectedRoute>
         } />
         <Route path='/admin/orders' element={
           <ProtectedRoute isAuth={isAuth}><Orders /></ProtectedRoute>
@@ -141,7 +137,7 @@ const App = () => {
 
       <Footer></Footer>
       <ToastContainer position="top-right"
-        autoClose={3000}
+        autoClose={2500}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

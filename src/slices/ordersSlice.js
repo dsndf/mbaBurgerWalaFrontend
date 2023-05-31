@@ -1,5 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from 'axios';
+
+const server = 'https://mbabwbackend.onrender.com';
+
 const initialState = {
     myorders: [],
     adminAllOrders: [],
@@ -43,7 +46,7 @@ export function getMyOrders() {
         dispatch(setOrdersStatus("loading"));
         try {
 
-            const { data } = await axios.get('/my/orders');
+            const { data } = await axios.get(`${server}/my/orders`);
             console.log("this is ",data.orders)
 
             dispatch(setOrders(data.orders))
@@ -64,7 +67,7 @@ export function getAllOrders() {
         dispatch(setOrdersStatus("loading"));
         try {
 
-            const { data } = await axios.get('/admin/orders');
+            const { data } = await axios.get(`${server}/admin/orders`);
         
             dispatch(setAdminAllOrders(data.orders))
             dispatch(setOrdersStatus("idle"));
@@ -83,7 +86,7 @@ export function  updateOrder(id) {
         dispatch(setOrdersStatus("loading"));
         try {
             console.log(id);
-            const { data } = await axios.put(`/admin/update/order/${id}`);
+            const { data } = await axios.put(`${server}/admin/update/order/${id}`);
              console.log(data.order)
             dispatch(setIsOrderUpdated(true));
             dispatch(setOrdersStatus("idle"));

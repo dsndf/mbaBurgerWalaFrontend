@@ -1,5 +1,5 @@
 
-import {configureStore, createSlice} from '@reduxjs/toolkit'
+import {configureStore} from '@reduxjs/toolkit'
 import adminUsersSlice from './slices/AdminUsersSlice';
 import cartSlice from './slices/cartSlice';
 import orderSlice from './slices/orderSlice';
@@ -17,3 +17,4 @@ const store =  configureStore({
 });
 
 export default store;
+
