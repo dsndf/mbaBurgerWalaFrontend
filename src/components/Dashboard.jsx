@@ -13,11 +13,12 @@ const Box = ({ title, count }) => (
   </div>
 );
 const server = 'https://mbabwbackend.onrender.com';
+
 const Dashboard = () => {
   const [state, setState] = useState({});
   const [status, setStatus] = useState(false);
   const getCounts = async () => {
-    const { data } = await axios.get(`${server}/admin/stats`);
+    const { data } = await axios.get(`${server}/admin/stats`,{withCredentials:true});
     setState(data);
     setStatus(true);
   };
