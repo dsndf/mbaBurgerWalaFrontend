@@ -22,6 +22,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Heading from "./Heading";
 import Loading from "./Loading";
+const server = 'https://mbabwbackend.onrender.com';
 
 const Payment = () => {
   const stripe = useStripe();
@@ -84,13 +85,13 @@ const [loading,setLoading] = useState(false);
         const { id } = paymentMethod;
         console.log(id);
         const config = {
+          withCredentials:true,
           headers: {
             "Content-Type": "application/json",
           },
         };
  console.log("axios calling");
-        const { data } = await axios.post(
-          "/process/payment",
+        const { data } = await axios.post(`${server}/process/payment`,
           { amount: Total*100, id },
           config
         );
