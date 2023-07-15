@@ -22,6 +22,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Heading from "./Heading";
 import Loading from "./Loading";
+const server = 'https://mbabwbackend.onrender.com';
 
 const Payment = () => {
   const stripe = useStripe();
@@ -82,26 +83,27 @@ const Payment = () => {
     if (!error) {
       try {
         const { id } = paymentMethod;
-        console.log(id);
+
         const config = {
+          withCredentials:true,
           headers: {
             "Content-Type": "application/json",
           },
         };
-
-        const { data } = await axios.post(
-          "/process/payment",
-          { amount: Total * 100, id },
+ 
+        const { data } = await axios.post(`${server}/process/payment`,
+          { amount: Total*100, id },
           config
         );
 
+ 
         const { success, client_secret } = data;
         setLoading(true);
         const result = await stripe.confirmCardPayment(client_secret);
 
         if (result.error) {
           setLoading(false);
-          console.log("neterer");
+        
           toast.error("Payment Failed please try agian");
           paybtn.current.disabled = false;
         } else {

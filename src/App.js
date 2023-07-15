@@ -24,7 +24,7 @@ import OrdersDetails from './components/OrdersDetails'
 import Dashboard from './components/Dashboard'
 import Users from './components/Users'
 import MyOrders from './components/MyOrders'
-import NotFOund from './components/NotFOund'
+import NotFound from './components/NotFound'
 import { useDispatch, useSelector } from 'react-redux'
 import { LoadUser, setIsLogOut } from './slices/userSlice'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -42,6 +42,7 @@ const App = () => {
     try {
       const { data } = await axios.get(`${server}/stripe/api/key`);
       setStripeApiKey(data.stripeApiKey);
+      console.log(data.stripeApiKey);
     }
     catch (err) {
       console.log(err.message);

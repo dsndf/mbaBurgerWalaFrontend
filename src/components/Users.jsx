@@ -27,7 +27,6 @@ const Users = () => {
       toast.success("User updated successfully");
       dispatch(setIsUpdated(false));
     }
-
     dispatch(getAllUsers());
   }, [isUpdated]);
 
@@ -67,7 +66,7 @@ const Users = () => {
                       <Link
                         onClick={() => {
                           if (user._id === _id) {
-                            toast.info("Admin can't change its role");
+                            toast.info("You can not change your role yourself");
                             return;
                           }
                           dispatch(updateUser(_id));
