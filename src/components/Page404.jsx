@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/NotFound.scss";
-const NotFound = () => {
+const Page404 = () => {
   return (
     <div className="notfound">
       <div>
@@ -16,4 +16,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default Page404;
