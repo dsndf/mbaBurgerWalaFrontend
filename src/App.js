@@ -42,6 +42,7 @@ const App = () => {
     try {
       const { data } = await axios.get(`${server}/stripe/api/key`);
       setStripeApiKey(data.stripeApiKey);
+      console.log(data.stripeApiKey);
     }
     catch (err) {
       console.log(err.message);
