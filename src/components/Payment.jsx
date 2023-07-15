@@ -88,15 +88,18 @@ const [loading,setLoading] = useState(false);
             "Content-Type": "application/json",
           },
         };
- 
+ console.log("axios calling");
         const { data } = await axios.post(
           "/process/payment",
           { amount: Total*100, id },
           config
         );
 
+ console.log("after axios calling");
         const { success, client_secret } = data;
 setLoading(true);
+      
+ console.log("client seceret is", client_secret);
         const result = await stripe.confirmCardPayment(client_secret);
 
         if (result.error) { 
