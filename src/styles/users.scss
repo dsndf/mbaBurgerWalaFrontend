@@ -81,77 +81,25 @@
 }
 @media screen and (max-width:600px) {
     .users-cont {
-    padding: 0;
-    
+ 
+         div {
+ 
+             width: 100%;
+         }
+     
+     }
+ 
+ 
+ 
+ }
+ 
+@media screen and (max-width:768px) {
+    .users-cont {
         div {
-            margin: 0px;
-            width: 100%;
-            height: 100%;
-       
-    overflow-x: scroll;
-            table {
-                margin: 5px auto;
-                width: 90%;
-                // border: 1px solid;
-                border-radius: 10px;
-                text-align: center;
-                border-collapse: collapse;
-    
-                thead {
-                    background-color: black;
-                    font-size: 15px;
-                    color: #fff;
-                     
-                    tr {
-                        th{
-                            padding: 7px;
-                        }
-                        th:last-child {
-                            cursor: pointer;
-                        }
-    
-                    }
-    
-    
-                }
-    
-                tbody {
-                    background-color: rgba(114, 114, 114, 0.068);
-                  
-                    >tr{
-                        .icons{
-                
-                       a >svg{
-                            margin: 0 5px;
-                      
-                         }
-                        }
-                        td {
-                            font-size: 15px;
-                         
-                            padding: 10px;
-                       
-    
-                            img{
-                                width: 50px;
-                                border-radius: 100%;
-                            }
-                        }
-                        td:last-child {
-                            cursor: pointer;
-                            svg{
-                                color:rgb(214, 0, 68);
-                                font-size: 17px;
-                            }
-                        }
-                        
-                    }
-    
-                }
-            }
-    
+        width: 90%;
         }
     
     }
     
 }
+

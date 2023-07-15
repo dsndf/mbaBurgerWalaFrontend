@@ -13,7 +13,7 @@
     div {
    
         width: 70%;
-        height: 80%;
+        height: 100%;
         padding: 10px;
         background-color: #fff;
  
@@ -70,20 +70,30 @@
     }
 
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
 
     .myorders-cont {
-padding: 0;
+
         div {
-         margin: 0;
-         height: 100%;
-         width: 100%;
-         overflow-x: scroll;
-     
-    
+
+            width: 90%;
         }
     
     }
 
     
 }
+@media screen and (max-width:600px) {
+    .myorders-cont {
+
+        div {
+
+            width: 100%;
+        }
+    
+    }
+
+
+
+}
+

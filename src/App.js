@@ -20,7 +20,7 @@ import Profile from './components/Profile'
 import Payment from './components/Payment';
 import Orders from './components/Orders'
 import OrdersDetails from './components/OrdersDetails'
-import './App.css';
+
 import Dashboard from './components/Dashboard'
 import Users from './components/Users'
 import MyOrders from './components/MyOrders'

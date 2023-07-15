@@ -10,6 +10,7 @@
     .cart {
         height: 100%;
         // border: 1px solid;
+
         padding: 10px;
         width: 50%;
 
@@ -127,7 +128,7 @@ width: 150px;
         height: 100vh;
         .cart {
             padding: 10px;
-            width: 90%;
+            width: 100%;
      
             .cart-item{
                 font-size: 13px;
@@ -143,28 +144,11 @@ width: 150px;
 }
 
 
-@media  screen and (max-width:600px ) {
-.cart-container{
-    .cart{
-        width: 100%;
-      margin: 0;
-      height: 100%;
-    }
-}
-.cart-container .cart .cart-item > div:first-child {
-    width: 7%;
-    
-}
-.cart-container .cart .cart-item > div {
 
-    width: 30%;
-
-}
- }
 @media  screen and (max-width:768px ) {
 .cart-container{
     .cart{
-        width: 100%;
+        width: 85%;
       margin: 0;
       height: 100%;
     }

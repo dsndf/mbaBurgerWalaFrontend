@@ -78,32 +78,6 @@ section {
 
 }
 
-
-
-@media screen and (max-width:768px) {
-
-    section {
-        padding: 0;
-
-        .form {
-            padding: 100px 0;
-            justify-content: start;
-            gap: 20px;
-            overflow-x: hidden;
-            width: 100%;
-            height: 100%;
-
-        }
-
-        .form-part {
-            display: none;
-
-        }
-
-    }
-
-}
-
 .thanku-cont {
 
     height: 100vmin;
@@ -132,14 +106,69 @@ section {
 
 }
 
+@media screen and (max-width:600px) {
+
+    section {
+        padding: 0;
+
+        .form {
+            width: 100%;
+        }
+
+        .form-part {
+            display: none;
+
+        }
+
+    }
+
+}
+
+
+
+@media screen and (max-width:600px) {
+
+    .thanku-cont {
+
+        >div {
+            width: 100%;
+        }
+
+    }
+}
+@media screen and (max-width:768px) {
+
+    section {
+        padding: 0;
+
+        .form {
+            padding: 100px 0;
+            justify-content: start;
+            gap: 20px;
+            overflow-x: hidden;
+            width: 85%;
+          
+
+        }
+
+        .form-part {
+            display: none;
+
+        }
+
+    }
+
+}
+
+
+
 @media screen and (max-width:768px) {
 
     .thanku-cont {
 
 
         >div {
-            height: 100%;
-            width: 100%;
+            width: 85%;
         }
 
     }

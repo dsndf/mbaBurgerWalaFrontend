@@ -22,12 +22,9 @@
 
     >div {
         width: 70%;
-        height: auto;
-        margin: 20px;
         background-color: #fff;
         height: 100%;
         border: none;
-        border-radius: 6px;
 
         .dash-fields {
             display: flex;
@@ -109,6 +106,16 @@
                 }
             }
 
+        }
+
+    }
+
+
+}
+@media screen and (max-width:768px) {
+    .dashboard {
+        >div {
+            width:85%;
         }
 
     }

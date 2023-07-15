@@ -71,12 +71,25 @@
 
     }
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:600px) {
     .main-payment-cont {
 height: auto;
        .paymentContainer {
             .payment-box {
     width: 100%;
+    
+            }
+    
+        }
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .main-payment-cont {
+height: auto;
+       .paymentContainer {
+            .payment-box {
+    width: 85%;
     
             }
     

@@ -21,3 +21,24 @@ button{
 }
 }
 }
+
+@media screen and (max-width:600px) {
+    .notfound {
+        >div {
+            width:100%;
+        }
+
+    }
+
+
+}
+@media screen and (max-width:768px) {
+    .notfound {
+        >div {
+            width:85%;
+        }
+
+    }
+
+
+}

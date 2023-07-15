@@ -124,7 +124,7 @@ setLoading(true);
         }
       } catch (err) {
         paybtn.current.disabled = false;
-        toast.error(err.response.data.message);
+        toast.error(err.message);
       }
     }
   };

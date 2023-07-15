@@ -1,4 +1,5 @@
 @import 'color';
+
 .orders-cont {
     height: 100vh;
     display: flex;
@@ -7,11 +8,13 @@
     padding: 0px;
     background: $bg;
     ;
-.icons{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
+
+    .icons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
     div {
         margin: 0px;
         width: 70%;
@@ -34,12 +37,13 @@
                 background-color: black;
                 font-size: 15px;
                 color: #fff;
-                 
+
                 tr {
-                    th{
+                    th {
                         padding: 7px;
-                    
+
                     }
+
                     th:last-child {
                         cursor: pointer;
                     }
@@ -52,20 +56,22 @@
             tbody {
                 background-color: rgba(114, 114, 114, 0.068);
 
-                >tr{
+                >tr {
                     td {
                         font-size: 15px;
-                    
+
                         padding: 10px;
                     }
+
                     td:last-child {
                         cursor: pointer;
-                        svg{
-                            color:rgb(0, 0, 0);
+
+                        svg {
+                            color: rgb(0, 0, 0);
                             font-size: 18px;
                         }
                     }
-                    
+
                 }
 
             }
@@ -74,26 +80,32 @@
     }
 
 }
-@media  screen and (max-width:768px) {
+
+@media screen and (max-width:600px) {
     .orders-cont {
-      
-  padding: 0;
-        
-        
+
 
         div {
-          
+
             width: 100%;
             height: 100%;
-          margin: 0;
-            background-color: #fff;
-            border-radius: 4px;
-         overflow-y: scroll;
-          
-    
+
+
         }
-    
+
     }
 
-     
+
+}
+
+@media screen and (max-width:768px) {
+    .orders-cont {
+        div {
+
+            width: 90%;
+        }
+
     }
+
+
+}
