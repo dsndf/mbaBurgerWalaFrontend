@@ -1,7 +1,8 @@
 @import 'color';
+
 .main-payment-cont {
 
-    
+
     .paymentContainer {
 
         display: flex;
@@ -12,18 +13,20 @@
         background: $bg;
 
         .payment-box {
-    
+
             width: 50%;
             height: 100%;
-          
+
             background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
- .info{
-    color: red;
- }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            .info {
+                color: red;
+            }
+
             >div {
                 position: relative;
                 display: flex;
@@ -63,7 +66,7 @@
 
             .btn {
                 width: 300px;
-   
+
                 margin: 10px 0;
 
             }
@@ -71,29 +74,33 @@
 
     }
 }
-@media screen and (max-width:600px) {
-    .main-payment-cont {
-height: auto;
-       .paymentContainer {
-            .payment-box {
-    width: 100%;
-    
-            }
-    
-        }
-    }
-    
-}
+
 @media screen and (max-width:768px) {
     .main-payment-cont {
-height: auto;
-       .paymentContainer {
+        height: auto;
+
+        .paymentContainer {
             .payment-box {
-    width: 85%;
-    
+                width: 85%;
+
             }
-    
+
         }
     }
-    
+
+}
+
+@media screen and (max-width:600px) {
+    .main-payment-cont {
+        height: auto;
+
+        .paymentContainer {
+            .payment-box {
+                width: 100%;
+
+            }
+
+        }
+    }
+
 }

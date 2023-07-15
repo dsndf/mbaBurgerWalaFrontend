@@ -3,7 +3,7 @@ import { FaEye } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
-import "../styles/myorders.scss";
+import "../styles/MyOrders.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { getMyOrders, setOrders } from "../slices/ordersSlice";
 import Loading from "./Loading";

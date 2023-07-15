@@ -9,7 +9,7 @@ import {
   updateUser,
 } from "../slices/AdminUsersSlice";
 import Loading from "./Loading";
-import "../styles/users.scss";
+import "../styles/Users.scss";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { GrEdit } from "react-icons/gr";

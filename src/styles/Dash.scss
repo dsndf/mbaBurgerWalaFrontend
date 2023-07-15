@@ -67,6 +67,17 @@
 
 }
 
+
+@media screen and (max-width:768px) {
+    .dashboard {
+        >div {
+            width:85%;
+        }
+
+    }
+
+
+}
 @media screen and (max-width:600px) {
     .dashboard {
         height: auto;
@@ -106,16 +117,6 @@
                 }
             }
 
-        }
-
-    }
-
-
-}
-@media screen and (max-width:768px) {
-    .dashboard {
-        >div {
-            width:85%;
         }
 
     }

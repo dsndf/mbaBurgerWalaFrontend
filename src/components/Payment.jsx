@@ -35,8 +35,8 @@ const Payment = () => {
   const Total = subTotal + Tax + shippingCharge;
   const payment = { amount: Math.round(Total * 100) };
   const navigation = useNavigate();
- const {isPlaced,err} = useSelector((state)=>state.orderReducer);
-const [loading,setLoading] = useState(false);
+  const { isPlaced, err } = useSelector((state) => state.orderReducer);
+  const [loading, setLoading] = useState(false);
   let orderItems = cart.map((v) => {
     return {
       name: v.name,
@@ -56,7 +56,7 @@ const [loading,setLoading] = useState(false);
 
   const paymentSubmit = async (e) => {
     e.preventDefault();
- console.log("3d secure call");
+    console.log("3d secure call");
     if (!stripe || !elements) {
       console.log("return");
       return;
@@ -78,7 +78,7 @@ const [loading,setLoading] = useState(false);
         },
       },
     });
- 
+
     if (!error) {
       try {
         const { id } = paymentMethod;
@@ -88,36 +88,31 @@ const [loading,setLoading] = useState(false);
             "Content-Type": "application/json",
           },
         };
- 
+
         const { data } = await axios.post(
           "/process/payment",
-          { amount: Total*100, id },
+          { amount: Total * 100, id },
           config
         );
 
         const { success, client_secret } = data;
-setLoading(true);
+        setLoading(true);
         const result = await stripe.confirmCardPayment(client_secret);
 
-        if (result.error) { 
-              setLoading(false);
-              console.log("neterer")
+        if (result.error) {
+          setLoading(false);
+          console.log("neterer");
           toast.error("Payment Failed please try agian");
           paybtn.current.disabled = false;
-     
         } else {
           if (result.paymentIntent.status === "succeeded") {
-            
             order.paymentMethod = "Online";
             dispatch(placeOrder(order));
-         
+
             order.paymentInfo = {
               id: result.paymentIntent.id,
               status: result.paymentIntent.status,
             };
-
-          
-          
           } else {
             toast.error("There is some issue");
           }
@@ -129,26 +124,22 @@ setLoading(true);
     }
   };
 
+  useEffect(() => {
+    if (isPlaced) {
+      toast.success("Payment has been done successfully");
+      dispatch(setIsPlaced(false));
+      navigation("/payment/success");
+    }
+  }, [isPlaced]);
 
-useEffect(()=>{
-if(isPlaced){
-  toast.success("Payment has been done successfully");
-   dispatch(setIsPlaced(false));
-  navigation("/payment/success");
-}
-},[isPlaced]) 
-
-if(loading){
-  return <Loading/>
-}
-
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
-      <div className="main-payment-cont">   
-       
+      <div className="main-payment-cont">
         <div className="paymentContainer">
-      
           <div className="payment-box">
             <Heading text={"Make Payment"}></Heading>
             <div>
@@ -169,13 +160,10 @@ if(loading){
                 className="btn"
                 type="submit"
                 ref={paybtn}
-      
                 value={`Pay ₹${Total}.00`}
                 onClick={paymentSubmit}
               />
-         
-            </div>  
-          
+            </div>
           </div>
         </div>
       </div>

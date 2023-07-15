@@ -7,7 +7,7 @@ import userimg from "../assets/userimg.jpg";
 import { toast } from "react-toastify";
 import { GrEdit } from "react-icons/gr";
 
-import "../styles/orders.scss";
+import "../styles/Orders.scss";
 import Loading from "./Loading";
 import { useSelector, useDispatch } from "react-redux";
 import {

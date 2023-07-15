@@ -106,36 +106,9 @@ section {
 
 }
 
-@media screen and (max-width:600px) {
-
-    section {
-        padding: 0;
-
-        .form {
-            width: 100%;
-        }
-
-        .form-part {
-            display: none;
-
-        }
-
-    }
-
-}
 
 
 
-@media screen and (max-width:600px) {
-
-    .thanku-cont {
-
-        >div {
-            width: 100%;
-        }
-
-    }
-}
 @media screen and (max-width:768px) {
 
     section {
@@ -147,8 +120,36 @@ section {
             gap: 20px;
             overflow-x: hidden;
             width: 85%;
-          
+          height: 100%;
 
+        }
+
+        .form-part {
+            display: none;
+
+        }
+
+    }
+
+}
+@media screen and (max-width:768px) {
+
+    .thanku-cont {
+
+
+        >div {
+            width: 85%;
+        }
+
+    }
+}
+@media screen and (max-width:600px) {
+
+    section {
+        padding: 0;
+
+        .form {
+            width: 100%;
         }
 
         .form-part {
@@ -161,14 +162,12 @@ section {
 }
 
 
-
-@media screen and (max-width:768px) {
+@media screen and (max-width:600px) {
 
     .thanku-cont {
 
-
         >div {
-            width: 85%;
+            width: 100%;
         }
 
     }

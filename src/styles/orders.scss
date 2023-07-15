@@ -81,6 +81,20 @@
 
 }
 
+
+@media screen and (max-width:768px) {
+    .orders-cont {
+        div {
+
+            width: 90%;
+        }
+
+    }
+
+
+
+}
+
 @media screen and (max-width:600px) {
     .orders-cont {
 
@@ -91,18 +105,6 @@
             height: 100%;
 
 
-        }
-
-    }
-
-
-}
-
-@media screen and (max-width:768px) {
-    .orders-cont {
-        div {
-
-            width: 90%;
         }
 
     }

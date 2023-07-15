@@ -1,41 +1,45 @@
 @import 'color';
 
-.notfound{
+.notfound {
     display: flex;
     justify-content: center;
     height: 80vh;
     background: $bg2;
-    >div{
-height: 100%;
-padding: 20px;
-background-color: #fff;
-width: 50%;
-text-align: center;
-h2{
-    margin: 15px 0;
-    font-size: 30px;
-}
-button{
-    margin: 30px auto;
-    border: none;
-}
-}
+
+    >div {
+        height: 100%;
+        padding: 20px;
+        background-color: #fff;
+        width: 50%;
+        text-align: center;
+
+        h2 {
+            margin: 15px 0;
+            font-size: 30px;
+        }
+
+        button {
+            margin: 30px auto;
+            border: none;
+        }
+    }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
     .notfound {
         >div {
-            width:100%;
+            width: 85%;
         }
 
     }
 
 
 }
-@media screen and (max-width:768px) {
+
+@media screen and (max-width:600px) {
     .notfound {
         >div {
-            width:85%;
+            width: 100%;
         }
 
     }
