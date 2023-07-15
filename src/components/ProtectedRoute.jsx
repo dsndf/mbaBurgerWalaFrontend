@@ -1,5 +1,5 @@
-import React, { Children, useEffect } from 'react'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import React, {useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const ProtectedRoute = ({children,isAuth}) => {
 
@@ -19,4 +19,4 @@ children
   )
 }
 
-export default ProtectedRoute
+export default ProtectedRoute;

@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/Profile.scss";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import userimg from "../assets/userimg.jpg";
 import { MdDashboard } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../slices/userSlice";

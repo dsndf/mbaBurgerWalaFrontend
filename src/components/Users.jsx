@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { SlActionRedo } from "react-icons/sl";
-import { MdDelete } from "react-icons/md";
 import { useSelector, useDispatch } from "react-redux";
-import userimg from "../assets/userimg.jpg";
 import {
   getAllUsers,
   setIsUpdated,

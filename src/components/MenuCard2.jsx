@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/MenuCard.scss";
-import { motion } from "framer-motion";
+
 const MenuCard2 = ({ name, item, image, price, handler }) => {
   return (
     <div className="MenuCard">
