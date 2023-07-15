@@ -9,11 +9,11 @@
 
     .ship {
 
-        height: 95%;
+        height: 100%;
      
         border-radius: 10px;
         padding: 10px;
-        width: 70%;
+        width: 50%;
 
         background-color: #fff;
         // box-shadow: 0 0 px rgb(151, 151, 151);
@@ -114,6 +114,14 @@ padding: 20px 0;
                 }
             }
         
+     }
+   
+  }
+@media  screen and (max-width:1024px) {
+     .ship-container{
+            .ship{ 
+     height: auto;
+            }
      }
    
   }

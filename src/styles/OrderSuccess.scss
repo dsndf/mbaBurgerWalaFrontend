@@ -1,38 +1,43 @@
 @import 'color';
-.order-success{
-    
+
+.order-success {
+
     height: 100vmin;
     background-color: $bg;
-display: flex;
-justify-content: center;
-align-items: center;
->div{
-    height: 100%;
-    width: 500px;
-    background-color: white;
-    border-radius: 4px;
-padding: 90px 10px;    text-align: center;
-h1{
-    margin: 20px;
-}
-a{
-    margin: 20px;
-    font-size: 13px;
-    padding: 10px 25px;
-    background-color: $logoColor;
-    color: #fff;
-    border-radius: 4px;
-}
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >div {
+        height: 100%;
+        width: 50%;
+        background-color: white;
+        padding: 90px 10px;
+        text-align: center;
+
+        h1 {
+            margin: 20px;
+        }
+
+        a {
+            margin: 20px;
+            font-size: 13px;
+            padding: 10px 25px;
+            background-color: $logoColor;
+            color: #fff;
+            border-radius: 4px;
+        }
+    }
 
 }
+
 @media screen and (max-width:768px) {
-    .order-success{
-    
-    >div{
-        height: 100%;
-        width: 100%;
-    }
-    
+    .order-success {
+
+        >div {
+            height: 100%;
+            width: 100%;
+        }
+
     }
 }

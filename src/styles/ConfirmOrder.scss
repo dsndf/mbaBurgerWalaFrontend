@@ -1,12 +1,13 @@
 @import 'color';
 
-.conford-container{
-    height: 100vmin;
-    background-color: $bg;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-.payment-options{
+.conford-container {
+  height: 80vmin;
+  background-color: $bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .payment-options {
     border-radius: 4px;
     display: flex;
     background-color: #fff;
@@ -14,34 +15,48 @@
     align-items: center;
     justify-content: space-evenly;
 
-height: 400px;
-width: 600px;
->div{
-width: 100%;
-// border: 1px solid;
-padding: 10px;
->div{
-    margin: 20px auto;
- padding: 10px;
- background-color:rgb(199 199 199 / 40%);
- border-radius: 4px;
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
->input{
-    display: block;
-}
-}
-}
-  a{
-    padding: 10px 15px;
-    background-color: $logoColor;
-    color:#fff;
-    border-radius: 4px;
-    font-size: 13px;
+    height: 100%;
+    width: 50%;
+
+    >div {
+      width: 100%;
+      // border: 1px solid;
+      padding: 10px;
+
+      >div {
+        margin: 20px auto;
+        padding: 10px;
+        background-color: rgb(199 199 199 / 40%);
+        border-radius: 4px;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        >input {
+          display: block;
+        }
+      }
+    }
+
+    a {
+      padding: 10px 15px;
+      background-color: $logoColor;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
   }
 
 }
 
+@media screen and (max-width:768px) {
+
+  .conford-container {
+    .payment-options {
+      width: 100%;
+    }
+
+  }
 }

@@ -4,18 +4,17 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding: 10px;
+
     background: $bg;
     ;
 
     div {
-        margin: 10px;
+
         width: 70%;
-        height: 80%;
+        height: 100%;
         padding: 10px;
         background-color: #fff;
-        border-radius: 4px;
-
+      overflow-y: scroll;
         table {
             margin: 5px auto;
             width: 90%;

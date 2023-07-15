@@ -1,29 +1,31 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getOrderDetails } from "../slices/orderSlice";
 import "../styles/OrdersDetails.scss";
 import Heading from "./Heading";
+import Loading from "./Loading";
 const OrdersDetails = () => {
+
   useEffect(() => {
     dispatch(getOrderDetails(orderid));
   }, []);
   const { orderid } = useParams();
   const dispatch = useDispatch();
-  const { order } = useSelector((state) => state.orderReducer);
+  const { order ,status} = useSelector((state) => state.orderReducer);
   const { user } = useSelector((state) => state.userReducer);
   const { itemsPrice, taxPrice, shippingPrice, totalPrice } = order;
 
-  let dateinfo = useMemo(() => {
-    return {
-      placedAt: new Date(order.createdAt).toDateString(),
-      deliveredAt: order.deliveredAt
-        ? new Date(order.deliveredAt).toDateString()
-        : "",
-      paidAt: order.paidAt ? new Date(order.paidAt).toDateString() : "",
-    };
-  });
-
+  let dateinfo = {
+    placedAt: new Date(order.createdAt).toDateString(),
+    deliveredAt: order.deliveredAt
+      ? new Date(order.deliveredAt).toDateString()
+      : "",
+    paidAt: order.paidAt ? new Date(order.paidAt).toDateString() : "",
+  };
+  if(status==="loading"){
+    return <Loading/>
+  }
   return (
     <div className="order-details">
       <div>
