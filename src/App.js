@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import './styles/App.scss'
 import Hero from './components/Hero'
 import 'react-toastify/dist/ReactToastify.min.css'
-import { toast, ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify'; 
 import Me from './components/Me';
 import Menu from './components/Menu'
 import Heading from './components/Heading'
