@@ -59,6 +59,7 @@ if(isDeleted){
               <th>Order Id</th>
               <th>Item Qty</th>
               <th>Amount</th>
+              <th>Payment Method</th>
               <th>Status</th>
               <th>Action</th>
             </tr>
@@ -66,13 +67,14 @@ if(isDeleted){
           <tbody>
             {adminAllOrders &&
               adminAllOrders.map(
-                ({ _id, orderStatus, totalPrice, orderItems }) => {
+                ({ _id, orderStatus, totalPrice, orderItems ,  paymentMethod}) => {
                   return (
                     <tr key={_id} >
                       <td>{_id}</td>
                       <td>{orderItems.length}</td>
 
                       <td>₹{totalPrice}</td>
+                      <td>{paymentMethod}</td>
                       <td
                         className={
                           (orderStatus === "Delivered" && "green") ||
