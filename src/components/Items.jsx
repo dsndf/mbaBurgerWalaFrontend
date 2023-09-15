@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import  data from "../data.json";
+import { data } from "../data.js";
 import MenuCard2 from "./MenuCard2";
 import { useDispatch, useSelector } from "react-redux";
 import { setCart } from "../slices/cartSlice";
