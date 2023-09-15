@@ -1,7 +1,7 @@
 @import 'color';
 
 .ship-container {
-    height: 100vmin;
+    height: 100vh;
     background-color:$bg;
     display: flex;
     justify-content: center;
@@ -10,8 +10,7 @@
     .ship {
 
         height: 100%;
-
-        border-radius: 10px;
+     
         padding: 10px;
         width: 50%;
 
@@ -91,19 +90,12 @@
     }
 }
 
-@media screen and (max-width:1024px) {
-    .ship-container {
-        .ship {
-            height: auto;
-        }
-    }
 
-}
 
 @media screen and (max-width:768px) {
 
     .ship-container {
-        height: auto;
+
 
         .ship {
 

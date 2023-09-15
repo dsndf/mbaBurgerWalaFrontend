@@ -52,7 +52,7 @@ const navigation = useNavigate();
    
 
       </div>     
-        <p className="main-menu-para" onClick={()=>navigation('/items')} >  Go to Main Menu...</p>
+        <p className="main-menu-para" onClick={()=>navigation('/items')} >Explore More...</p>
     </>
   );
 };

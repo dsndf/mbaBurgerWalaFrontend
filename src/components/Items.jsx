@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { data } from "../data.js";
+import  data from "data.json";
 import MenuCard2 from "./MenuCard2";
 import { useDispatch, useSelector } from "react-redux";
 import { setCart } from "../slices/cartSlice";
@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import Loading from "./Loading.jsx";
 const Items = () => {
   const dispatch = useDispatch();
+  data  = JSON.parse(data);
   const { cart } = useSelector((state) => state.cartReducer);
   const [pno, setPno] = useState(1);
   const [arr, setArr] = useState([...data].slice(0, 6));
@@ -119,7 +120,7 @@ const Items = () => {
                       key={ind}
                       de={0.1 + ind}
                       name={v.name}
-                      item={ind}
+                      item={ind+1}
                       image={v.img}
                       price={v.price}
                       handler={addToCartHandler}

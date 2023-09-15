@@ -63,7 +63,6 @@ const Payment = () => {
       return;
     }
     paybtn.current.disabled = true;
-
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
       card: elements.getElement(CardNumberElement),
