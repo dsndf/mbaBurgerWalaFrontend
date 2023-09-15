@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import  data from "data.json";
+import  data from "../data.json";
 import MenuCard2 from "./MenuCard2";
 import { useDispatch, useSelector } from "react-redux";
 import { setCart } from "../slices/cartSlice";
@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 import Loading from "./Loading.jsx";
 const Items = () => {
   const dispatch = useDispatch();
-  data  = JSON.parse(data);
   const { cart } = useSelector((state) => state.cartReducer);
   const [pno, setPno] = useState(1);
   const [arr, setArr] = useState([...data].slice(0, 6));
