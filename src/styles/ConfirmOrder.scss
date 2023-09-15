@@ -51,20 +51,22 @@
 
 }
 
+
+@media screen and (max-width:768px) {
+
+  .conford-container {
+    .payment-options {
+      width: 85%;
+    }
+
+  }
+}
+
 @media screen and (max-width:600px) {
 
   .conford-container {
     .payment-options {
       width: 100%;
-    }
-
-  }
-}
-@media screen and (max-width:768px) {
-
-  .conford-container {
-    .payment-options {
-      width:85%;
     }
 
   }

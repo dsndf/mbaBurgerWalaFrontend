@@ -22,7 +22,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Heading from "./Heading";
 import Loading from "./Loading";
-const server = 'https://mbabwbackend.onrender.com';
+const server = "https://mbabwbackend.onrender.com";
 
 const Payment = () => {
   const stripe = useStripe();
@@ -84,36 +84,36 @@ const Payment = () => {
         const { id } = paymentMethod;
 
         const config = {
-          withCredentials:true,
+          withCredentials: true,
           headers: {
             "Content-Type": "application/json",
           },
         };
- 
-        const { data } = await axios.post(`${server}/process/payment`,
-          { amount: Total*100, id },
+
+        const { data } = await axios.post(
+          `${server}/process/payment`,
+          { amount: Total * 100, id },
           config
         );
 
- 
         const { success, client_secret } = data;
         setLoading(true);
         const result = await stripe.confirmCardPayment(client_secret);
 
         if (result.error) {
           setLoading(false);
-        
+
           toast.error("Payment Failed please try agian");
           paybtn.current.disabled = false;
         } else {
           if (result.paymentIntent.status === "succeeded") {
             order.paymentMethod = "Online";
-            dispatch(placeOrder(order));
 
             order.paymentInfo = {
               id: result.paymentIntent.id,
               status: result.paymentIntent.status,
             };
+            dispatch(placeOrder(order));
           } else {
             toast.error("There is some issue");
           }

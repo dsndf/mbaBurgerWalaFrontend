@@ -83,7 +83,11 @@ const OrdersDetails = () => {
           </p>
           <p>
             Payment Reference:{" "}
-            <span>{order.paymentInfo ? order.paymentInfo.id : "NA"}</span>
+            <span>{order.paymentInfo?order.paymentInfo.id : "NA"}</span>
+          </p>
+          <p>
+            Payment Status:{" "}
+            <span>{order.paymentInfo?order.paymentInfo.status : "NA"}</span>
           </p>
           <p>
             Paid At: <span>{dateinfo.paidAt ? dateinfo.paidAt : "NA"}</span>
