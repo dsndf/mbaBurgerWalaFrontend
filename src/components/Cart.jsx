@@ -95,6 +95,10 @@ const Cart = () => {
                 <p className="price">₹30</p>
               </div>
               <div>
+                <p>Total</p>
+                <p className="price">₹{Total}</p>
+              </div>
+              <div>
                 <Link
                   to={"/shipping"}
                   className="btn"
