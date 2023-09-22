@@ -9,7 +9,7 @@ const OrderPlaced = () => {
     <div className="order-success">
       <div>
         <h1>Order Placed</h1>
-        <p>Your Order has been placed.You can chack order status below.</p>
+        <p>Your Order has been placed.You can check order status below.</p>
         <br />
         <br />
         <Link to={`/order/${order._id}`}>Check Order</Link>
