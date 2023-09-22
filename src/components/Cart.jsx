@@ -4,7 +4,7 @@ import burger from "../assets/Cb.png";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { removeCartItem, setCartItemQty } from "../slices/cartSlice";
-import { TiDeleteOutline } from "react-icons/ti";
+import { TiDeleteOutline } from "react-icons/ti"; 
 const CartItem = ({ title, image, Qty, price }) => {
   const [qty, setQty] = useState(Qty);
   const dispatch = useDispatch();
